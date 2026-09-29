@@ -41,7 +41,7 @@ void AProgressHttpActor::NovoJogo(FString FaseInicial, int32 VidaInicial)
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(TEXT("http://localhost:5070/api/progresso/novo-jogo"));
+    Pedido->SetURL(TEXT("https://unreal-api-production.up.railway.app/api/progresso/novo-jogo"));
     Pedido->SetVerb(TEXT("POST"));
     Pedido->SetHeader(TEXT("Content-Type"), TEXT("application/json"));
     Pedido->SetContentAsString(TextoJson);
@@ -104,7 +104,7 @@ void AProgressHttpActor::CarregarFase(FString Fase)
         FHttpModule::Get().CreateRequest();
 
     Pedido->SetURL(FString::Printf(
-        TEXT("http://localhost:5070/api/progresso/%s/inventario"),
+        TEXT("https://unreal-api-production.up.railway.app/api/progresso/%s/inventario"),
         *FGenericPlatformHttp::UrlEncode(Fase)
     ));
     Pedido->SetVerb(TEXT("GET"));
@@ -157,7 +157,7 @@ void AProgressHttpActor::CarregarColetadosDaFase(
         FHttpModule::Get().CreateRequest();
 
     Pedido->SetURL(FString::Printf(
-        TEXT("http://localhost:5070/api/progresso/%s/coletados"),
+        TEXT("https://unreal-api-production.up.railway.app/api/progresso/%s/coletados"),
         *FGenericPlatformHttp::UrlEncode(Fase)
     ));
     Pedido->SetVerb(TEXT("GET"));
@@ -225,7 +225,7 @@ void AProgressHttpActor::CarregarProgresso()
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(TEXT("http://localhost:5070/api/progresso"));
+    Pedido->SetURL(TEXT("https://unreal-api-production.up.railway.app/api/progresso"));
     Pedido->SetVerb(TEXT("GET"));
 
     Pedido->OnProcessRequestComplete().BindLambda(
@@ -284,7 +284,7 @@ void AProgressHttpActor::SalvarProgresso(
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(TEXT("http://localhost:5070/api/progresso"));
+    Pedido->SetURL(TEXT("https://unreal-api-production.up.railway.app/api/progresso"));
     Pedido->SetVerb(TEXT("PUT"));
     Pedido->SetHeader(TEXT("Content-Type"), TEXT("application/json"));
     Pedido->SetContentAsString(TextoJson);
@@ -348,7 +348,7 @@ void AProgressHttpActor::RegistrarColeta(
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(TEXT("http://localhost:5070/api/progresso/coletar"));
+    Pedido->SetURL(TEXT("https://unreal-api-production.up.railway.app/api/progresso/coletar"));
     Pedido->SetVerb(TEXT("POST"));
     Pedido->SetHeader(TEXT("Content-Type"), TEXT("application/json"));
     Pedido->SetContentAsString(TextoJson);
