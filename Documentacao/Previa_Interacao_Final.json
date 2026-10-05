@@ -1,0 +1,80 @@
+{
+  "states": [
+    {
+      "title": "botao_repouso",
+      "screen": 0,
+      "blocked": false,
+      "hover": false,
+      "elevation": 0.0,
+      "selected": false,
+      "z": null,
+      "parts_scale": [
+        0.93,
+        0.005,
+        1.0
+      ]
+    },
+    {
+      "title": "botao_hover",
+      "screen": 0,
+      "blocked": false,
+      "hover": true,
+      "elevation": 1.0,
+      "selected": false,
+      "z": null,
+      "parts_scale": [
+        0.9811499512195587,
+        0.005274999737739563,
+        1.0549999475479126
+      ]
+    },
+    {
+      "title": "laranja_repouso",
+      "screen": 1,
+      "blocked": false,
+      "hover": false,
+      "elevation": 0.0,
+      "selected": true,
+      "z": 108.000004,
+      "parts_scale": [
+        1.0
+      ]
+    },
+    {
+      "title": "laranja_hover",
+      "screen": 1,
+      "blocked": false,
+      "hover": true,
+      "elevation": 1.0,
+      "selected": true,
+      "z": 113.000004,
+      "parts_scale": [
+        1.0
+      ]
+    },
+    {
+      "title": "laranja_retorno",
+      "screen": 1,
+      "blocked": false,
+      "hover": false,
+      "elevation": 0.0,
+      "selected": true,
+      "z": 108.000004,
+      "parts_scale": [
+        1.0
+      ]
+    },
+    {
+      "title": "verde_hover",
+      "screen": 1,
+      "blocked": false,
+      "hover": true,
+      "elevation": 1.0,
+      "selected": false,
+      "z": 113.000004,
+      "parts_scale": [
+        1.0
+      ]
+    }
+  ]
+}

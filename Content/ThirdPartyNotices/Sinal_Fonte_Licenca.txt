@@ -1,0 +1,4 @@
+Lissajous animation.gif — Krishnavedala
+Fonte: https://commons.wikimedia.org/wiki/File:Lissajous_animation.gif
+Licenca: CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+Adaptacoes: recorte da curva, mascara de cor, 64 quadros, reducao para atlas 2048x256, cor aplicada no material. A animacao adaptada permanece sob CC BY-SA 3.0.

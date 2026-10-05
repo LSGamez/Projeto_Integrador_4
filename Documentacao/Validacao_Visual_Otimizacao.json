@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "views": [
+    "main",
+    "options",
+    "credits"
+  ],
+  "visible_caches_playing": 3
+}

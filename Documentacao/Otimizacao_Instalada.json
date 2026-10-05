@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "changes": [
+    "Dust instanced and animated with GPU material",
+    "Idle control Tick sleeps and interaction wakes it",
+    "Steam visibility gate and 20 Hz timer",
+    "Cache visibility pause and 30 Hz updates",
+    "Six fill lights no longer cast shadows"
+  ],
+  "lights": [
+    {
+      "name": "Luz_01",
+      "position": "<Struct 'Vector' (0x0000013B625D4BA0) {x: -391.999984, y: 260.999990, z: 331.999993}>",
+      "shadow_before": true,
+      "shadow_after": false
+    },
+    {
+      "name": "Luz_02",
+      "position": "<Struct 'Vector' (0x0000013B625D4BA0) {x: -391.999984, y: -260.999990, z: 331.999993}>",
+      "shadow_before": true,
+      "shadow_after": false
+    },
+    {
+      "name": "Luz_03",
+      "position": "<Struct 'Vector' (0x0000013B625D4BA0) {x: 0.000000, y: 260.999990, z: 331.999993}>",
+      "shadow_before": true,
+      "shadow_after": false
+    },
+    {
+      "name": "Luz_04",
+      "position": "<Struct 'Vector' (0x0000013B625D4BA0) {x: 0.000000, y: -260.999990, z: 331.999993}>",
+      "shadow_before": true,
+      "shadow_after": false
+    },
+    {
+      "name": "Luz_05",
+      "position": "<Struct 'Vector' (0x0000013B625D4BA0) {x: 391.999984, y: 260.999990, z: 331.999993}>",
+      "shadow_before": true,
+      "shadow_after": false
+    },
+    {
+      "name": "Luz_06",
+      "position": "<Struct 'Vector' (0x0000013B625D4BA0) {x: 391.999984, y: -260.999990, z: 331.999993}>",
+      "shadow_before": true,
+      "shadow_after": false
+    },
+    {
+      "name": "Luz_07",
+      "position": "<Struct 'Vector' (0x0000013B625D4BA0) {x: 100.000000, y: 450.000000, z: 279.999995}>",
+      "shadow_before": true,
+      "shadow_after": true
+    },
+    {
+      "name": "Luz_08",
+      "position": "<Struct 'Vector' (0x0000013B625D4BA0) {x: -646.000004, y: 110.000002, z: 301.999998}>",
+      "shadow_before": true,
+      "shadow_after": true
+    }
+  ],
+  "dust_actors_before": 26,
+  "dust_actors_after": 1,
+  "dust_instances": 26,
+  "environment_interval": 0.05,
+  "cache_tick_interval": 0.03333333333333333,
+  "shadow_lights_before": 9,
+  "shadow_lights_after": 3
+}

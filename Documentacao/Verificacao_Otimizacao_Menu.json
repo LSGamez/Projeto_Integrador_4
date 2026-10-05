@@ -1,0 +1,316 @@
+{
+  "success": true,
+  "method": "Engine viewport input regression. Mouse capture released before every press. Scene rendering disabled during input tests. Not OS/Slate end-to-end.",
+  "quality_test_scope": "quality1/quality2 dispatch tested with temporary PIE action aliases; renderer scalability change isolated due GPU crashes. quality0 is exercised normally.",
+  "tests": [
+    {
+      "screen": 0,
+      "action": "settings",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_6",
+        "expected": "BP_ControleLaboratorio_C_6",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.5978393554688,
+        "y": 335.77056884765625
+      },
+      "passed": true,
+      "active_control_ticks": 1,
+      "actions_processed": 1,
+      "result_screen": 1,
+      "quality": 0
+    },
+    {
+      "screen": 1,
+      "action": "quality0",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_1",
+        "expected": "BP_ControleLaboratorio_C_1",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 411.6468505859375,
+        "y": 444.4855651855469
+      },
+      "passed": true,
+      "active_control_ticks": 1,
+      "actions_processed": 1,
+      "result_screen": 1,
+      "quality": 0
+    },
+    {
+      "screen": 1,
+      "action": "quality1",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_2",
+        "expected": "BP_ControleLaboratorio_C_2",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 631.9921875,
+        "y": 444.4855651855469
+      },
+      "passed": true,
+      "active_control_ticks": 1,
+      "actions_processed": 1,
+      "result_screen": 1,
+      "quality": 0
+    },
+    {
+      "screen": 1,
+      "action": "quality2",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_3",
+        "expected": "BP_ControleLaboratorio_C_3",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 862.353271484375,
+        "y": 444.4855651855469
+      },
+      "passed": true,
+      "active_control_ticks": 1,
+      "actions_processed": 1,
+      "result_screen": 1,
+      "quality": 0
+    },
+    {
+      "screen": 1,
+      "action": "back",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_0",
+        "expected": "BP_ControleLaboratorio_C_0",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 637.0000610351562,
+        "y": 72.19754028320312
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 0,
+      "quality": 0
+    },
+    {
+      "screen": 0,
+      "action": "credits",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_7",
+        "expected": "BP_ControleLaboratorio_C_7",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.6345825195312,
+        "y": 387.1708068847656
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 2,
+      "quality": 0
+    },
+    {
+      "screen": 2,
+      "action": "back",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_4",
+        "expected": "BP_ControleLaboratorio_C_4",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 636.9999389648438,
+        "y": 554.9525146484375
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 0,
+      "quality": 0
+    },
+    {
+      "screen": 0,
+      "action": "new_game",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_5",
+        "expected": "BP_ControleLaboratorio_C_5",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.5609130859375,
+        "y": 283.9660949707031
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 4,
+      "quality": 0
+    },
+    {
+      "screen": 4,
+      "action": "confirm_new",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_11",
+        "expected": "BP_ControleLaboratorio_C_11",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.60009765625,
+        "y": 338.8971862792969
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 4,
+      "quality": 0
+    },
+    {
+      "screen": 4,
+      "action": "back",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_12",
+        "expected": "BP_ControleLaboratorio_C_12",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.6417236328125,
+        "y": 397.24786376953125
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 0,
+      "quality": 0
+    },
+    {
+      "screen": 0,
+      "action": "exit",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_8",
+        "expected": "BP_ControleLaboratorio_C_8",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.6709594726562,
+        "y": 438.17156982421875
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 3,
+      "quality": 0
+    },
+    {
+      "screen": 3,
+      "action": "back",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_10",
+        "expected": "BP_ControleLaboratorio_C_10",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.6417236328125,
+        "y": 397.24786376953125
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 0,
+      "quality": 0
+    },
+    {
+      "screen": 0,
+      "action": "settings",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_6",
+        "expected": "BP_ControleLaboratorio_C_6",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.5978393554688,
+        "y": 335.77056884765625
+      },
+      "passed": true,
+      "active_control_ticks": 1,
+      "actions_processed": 1,
+      "result_screen": 1,
+      "quality": 0
+    },
+    {
+      "screen": 1,
+      "action": "back",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_0",
+        "expected": "BP_ControleLaboratorio_C_0",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 637.0000610351562,
+        "y": 72.19754028320312
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 0,
+      "quality": 0
+    },
+    {
+      "screen": 0,
+      "action": "exit",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_8",
+        "expected": "BP_ControleLaboratorio_C_8",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.6709594726562,
+        "y": 438.17156982421875
+      },
+      "passed": true,
+      "active_control_ticks": 0,
+      "actions_processed": 1,
+      "result_screen": 3,
+      "quality": 0
+    },
+    {
+      "screen": 3,
+      "action": "confirm_exit",
+      "presses_sent": 1,
+      "pointer": {
+        "projected": true,
+        "hit": "BP_ControleLaboratorio_C_9",
+        "expected": "BP_ControleLaboratorio_C_9",
+        "capture_mode": 3,
+        "capture_before": false,
+        "x": 627.60009765625,
+        "y": 338.8971862792969
+      },
+      "passed": true,
+      "result": "Um pressionamento encerrou a prévia"
+    }
+  ],
+  "screenshots": [],
+  "new_game_safety": "NovoJogoOriginal unset in PIE only. Confirm action tested; gameplay/API not invoked.",
+  "total_controls": 13,
+  "idle_controls_ticking": 0,
+  "offscreen_cache_paused": 3,
+  "dust_instances": 26,
+  "stable_hover_seconds": 5,
+  "stable_hover_sleeping": true
+}

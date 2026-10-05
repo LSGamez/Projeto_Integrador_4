@@ -1,0 +1,297 @@
+{
+  "success": true,
+  "checks": [
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança settings na tela 0"
+    },
+    {
+      "ok": true,
+      "description": "Viewport sem captura de mouse"
+    },
+    {
+      "ok": true,
+      "description": "Hover permanece ativo sem oscilar"
+    },
+    {
+      "ok": true,
+      "description": "Som não se repete enquanto o mouse fica parado"
+    },
+    {
+      "ok": true,
+      "description": "Botão permanece expandido"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança settings na tela 0"
+    },
+    {
+      "ok": true,
+      "description": "Um clique abre opções"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança quality0 na tela 1"
+    },
+    {
+      "ok": true,
+      "description": "Laranja sobe 5 cm pelo mouse real"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança back na tela 1"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança back na tela 1"
+    },
+    {
+      "ok": true,
+      "description": "Voltar das opções funciona com um clique"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança credits na tela 0"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança credits na tela 0"
+    },
+    {
+      "ok": true,
+      "description": "Créditos abre com um clique"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança back na tela 2"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança back na tela 2"
+    },
+    {
+      "ok": true,
+      "description": "Voltar dos créditos funciona com um clique"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança new_game na tela 0"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança new_game na tela 0"
+    },
+    {
+      "ok": true,
+      "description": "Novo jogo abre a confirmação com um clique"
+    },
+    {
+      "ok": true,
+      "description": "Não iniciou/resetou o progresso"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança back na tela 4"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança back na tela 4"
+    },
+    {
+      "ok": true,
+      "description": "Voltar da confirmação de novo jogo funciona com um clique"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança exit na tela 0"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança exit na tela 0"
+    },
+    {
+      "ok": true,
+      "description": "Sair abre a confirmação com um clique"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança back na tela 3"
+    },
+    {
+      "ok": true,
+      "description": "O canal exclusivo alcança back na tela 3"
+    },
+    {
+      "ok": true,
+      "description": "Voltar da confirmação de saída funciona com um clique"
+    },
+    {
+      "ok": true,
+      "description": "Fluxo de progresso não acionado"
+    }
+  ],
+  "pointers": [
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_6",
+      "expected": "BP_ControleLaboratorio_C_6",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.5978393554688,
+      "y": 335.77056884765625
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_6",
+      "expected": "BP_ControleLaboratorio_C_6",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.5978393554688,
+      "y": 335.77056884765625
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_1",
+      "expected": "BP_ControleLaboratorio_C_1",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 411.6468505859375,
+      "y": 444.4855651855469
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_0",
+      "expected": "BP_ControleLaboratorio_C_0",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 637.0000610351562,
+      "y": 72.19754028320312
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_0",
+      "expected": "BP_ControleLaboratorio_C_0",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 637.0000610351562,
+      "y": 72.19754028320312
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_7",
+      "expected": "BP_ControleLaboratorio_C_7",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.6345825195312,
+      "y": 387.1708068847656
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_7",
+      "expected": "BP_ControleLaboratorio_C_7",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.6345825195312,
+      "y": 387.1708068847656
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_4",
+      "expected": "BP_ControleLaboratorio_C_4",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 636.9999389648438,
+      "y": 554.9525146484375
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_4",
+      "expected": "BP_ControleLaboratorio_C_4",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 636.9999389648438,
+      "y": 554.9525146484375
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_5",
+      "expected": "BP_ControleLaboratorio_C_5",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.5609130859375,
+      "y": 283.9660949707031
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_5",
+      "expected": "BP_ControleLaboratorio_C_5",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.5609130859375,
+      "y": 283.9660949707031
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_12",
+      "expected": "BP_ControleLaboratorio_C_12",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.6417236328125,
+      "y": 397.24786376953125
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_12",
+      "expected": "BP_ControleLaboratorio_C_12",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.6417236328125,
+      "y": 397.24786376953125
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_8",
+      "expected": "BP_ControleLaboratorio_C_8",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.6709594726562,
+      "y": 438.17156982421875
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_8",
+      "expected": "BP_ControleLaboratorio_C_8",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.6709594726562,
+      "y": 438.17156982421875
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_10",
+      "expected": "BP_ControleLaboratorio_C_10",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.6417236328125,
+      "y": 397.24786376953125
+    },
+    {
+      "projected": true,
+      "hit": "BP_ControleLaboratorio_C_10",
+      "expected": "BP_ControleLaboratorio_C_10",
+      "capture_mode": 0,
+      "capture_before": true,
+      "x": 627.6417236328125,
+      "y": 397.24786376953125
+    }
+  ],
+  "hover_samples": [
+    {
+      "button": "settings",
+      "frames": 183,
+      "hover_drops": 0,
+      "sound_repeats": 0,
+      "elevation": 1.0
+    }
+  ]
+}
