@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "status": 200,
+  "before": {
+    "jogadorId": 1,
+    "fase": "Cena_Lobby",
+    "checkpoint": null,
+    "vida": 100,
+    "itens": ""
+  },
+  "restored": {
+    "jogadorId": 1,
+    "fase": "Cena_Lobby",
+    "checkpoint": null,
+    "vida": 100,
+    "itens": ""
+  },
+  "scope": "Registro principal de progresso. As consultas anteriores só registraram inventário e coletados de Cena_Fase1, ambos vazios."
+}

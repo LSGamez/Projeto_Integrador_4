@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "mode": "Despacho pelo Blueprint do menu em PIE. Novo jogo usa UrlApi local na instância PIE; consultas da Cena_Fase1 usam a API real. Sem cliques físicos do Windows.",
+  "tests": [
+    {
+      "name": "http500_unlocks_menu",
+      "passed": true,
+      "seconds": 0.047,
+      "message": "O servidor respondeu HTTP 500 ao iniciar o novo jogo. Tente novamente."
+    },
+    {
+      "name": "timeout_unlocks_menu",
+      "passed": true,
+      "seconds": 1.015,
+      "message": "Sem resposta do servidor ao iniciar o novo jogo. Confira a conexao e tente novamente."
+    },
+    {
+      "name": "retry_after_failure_loads_phase1",
+      "passed": true,
+      "player_class": "/Game/Blueprints/Personagem/BP_Tatu.BP_Tatu_C",
+      "phase_loading_finished": true
+    }
+  ],
+  "loaded_map": "Cena_Fase1"
+}

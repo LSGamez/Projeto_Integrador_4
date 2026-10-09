@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "mode": "Fluxo real em PIE: o redirecionamento tardio foi rejeitado pelo HTTP e o POST foi enviado à API de produção.",
+  "new_game_dispatch": true,
+  "confirm_dispatch": true,
+  "loaded_map": "Cena_Fase1",
+  "phase_loading_finished": true,
+  "character_class": "/Game/Blueprints/Personagem/BP_Tatu.BP_Tatu_C",
+  "production_reset_occurred": true,
+  "save_restoration_report": "save_restoration.json",
+  "preservation_limit": "Registro principal restaurado; somente o inventário e os coletados de Cena_Fase1 tinham sido consultados antes (vazios). Não há snapshot anterior dos coletados de outras fases."
+}

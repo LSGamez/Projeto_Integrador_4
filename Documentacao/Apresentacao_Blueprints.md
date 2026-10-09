@@ -127,3 +127,12 @@ Os botões de qualidade média e alta são verificados com ações temporárias 
 No gestor, o cursor continua atualizando por quadro. O timer `AtualizarAmbiente` atualiza a cada 0,05 segundo; `AtualizarAnimacoesVisiveis` pausa e retoma os Geometry Caches conforme visibilidade recente. Os controles continuam usando a área de clique fixa e o mesmo processamento de clique único.
 
 Há quatro Blueprints; `Poeira_01` é um Actor nativo com Instanced Static Mesh Component. A ferramenta de autoria não precisa estar instalada no projeto. Veja `Otimizacao_Menu_Aplicada.md` e os relatórios JSON para números e limites dos testes.
+
+
+## Novo jogo e tratamento de erro — 08/10/2026
+
+`BP_MenuLaboratorio → AcoesDoTerminal → IniciarExperimento` chama `NovoJogo` diretamente no serviço `BP_MenuHttpActor`. A referência ao botão antigo não é usada para iniciar a API. `ExperimentoFalhou` libera a espera e atualiza a mensagem do terminal.
+
+No Blueprint de serviço já existente, `InicioEFalhaDoExperimento` organiza os dois callbacks: confirmação → entrada de gameplay → Open Level; falha → mensagem no gestor. A espera HTTP padrão é 45 segundos; URL e intervalo são editáveis na categoria Progresso. O transporte permanece no módulo C++ HTTP existente.
+
+Consulte `Correcao_NovoJogo.md` para os testes, a verificação da API e a ocorrência do reinício real do save no teste inicial.

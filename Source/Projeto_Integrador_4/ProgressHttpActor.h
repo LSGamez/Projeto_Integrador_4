@@ -10,6 +10,12 @@ class PROJETO_INTEGRADOR_4_API AProgressHttpActor : public AActor
     GENERATED_BODY()
 
 public:
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Progresso")
+    FString UrlApi = TEXT("https://unreal-api-production.up.railway.app/api/progresso");
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Progresso", meta = (ClampMin = "1.0", ClampMax = "90.0"))
+    float TempoLimiteNovoJogo = 45.0f;
+
     // Limpa o save pela API. O evento de sucesso pode abrir a fase inicial.
     UFUNCTION(BlueprintCallable, Category = "Progresso")
     void NovoJogo(FString FaseInicial, int32 VidaInicial);
@@ -63,6 +69,7 @@ public:
     );
 
 private:
+    FString MontarUrl(const FString& Caminho = TEXT("")) const;
     void CarregarColetadosDaFase(
         FString Fase,
         int32 ItemA,

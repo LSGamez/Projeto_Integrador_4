@@ -8,6 +8,29 @@
 #include "Serialization/JsonSerializer.h"
 #include "Serialization/JsonWriter.h"
 
+namespace
+{
+    FString DescreverFalhaApi(const FString& Operacao, const FHttpResponsePtr& Response, bool Sucesso)
+    {
+        if (!Response.IsValid())
+        {
+            return FString::Printf(TEXT("Sem resposta do servidor ao %s. Confira a conexao e tente novamente."), *Operacao);
+        }
+        if (!Sucesso)
+        {
+            return FString::Printf(TEXT("A conexao foi interrompida ao %s. Tente novamente."), *Operacao);
+        }
+        return FString::Printf(TEXT("O servidor respondeu HTTP %d ao %s. Tente novamente."), Response->GetResponseCode(), *Operacao);
+    }
+}
+
+FString AProgressHttpActor::MontarUrl(const FString& Caminho) const
+{
+    FString Base = UrlApi.TrimStartAndEnd();
+    while (Base.RemoveFromEnd(TEXT("/"))) {}
+    return Base + Caminho;
+}
+
 void AProgressHttpActor::NovoJogo(FString FaseInicial, int32 VidaInicial)
 {
     if (IniciandoNovoJogo)
@@ -41,11 +64,11 @@ void AProgressHttpActor::NovoJogo(FString FaseInicial, int32 VidaInicial)
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(TEXT("https://unreal-api-production.up.railway.app/api/progresso/novo-jogo"));
+    Pedido->SetURL(MontarUrl(TEXT("/novo-jogo")));
     Pedido->SetVerb(TEXT("POST"));
     Pedido->SetHeader(TEXT("Content-Type"), TEXT("application/json"));
     Pedido->SetContentAsString(TextoJson);
-    Pedido->SetTimeout(15.0f);
+    Pedido->SetTimeout(FMath::Clamp(TempoLimiteNovoJogo, 1.0f, 90.0f));
 
     Pedido->OnProcessRequestComplete().BindWeakLambda(
         this,
@@ -54,7 +77,7 @@ void AProgressHttpActor::NovoJogo(FString FaseInicial, int32 VidaInicial)
             if (!Sucesso || !Response.IsValid()
                 || Response->GetResponseCode() < 200 || Response->GetResponseCode() >= 300)
             {
-                NotificarFalhaNovoJogo(TEXT("Nao foi possivel reiniciar o save. Confira se a API esta rodando."));
+                NotificarFalhaNovoJogo(DescreverFalhaApi(TEXT("iniciar o novo jogo"), Response, Sucesso));
                 return;
             }
 
@@ -103,10 +126,10 @@ void AProgressHttpActor::CarregarFase(FString Fase)
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(FString::Printf(
-        TEXT("https://unreal-api-production.up.railway.app/api/progresso/%s/inventario"),
+    Pedido->SetURL(MontarUrl(FString::Printf(
+        TEXT("/%s/inventario"),
         *FGenericPlatformHttp::UrlEncode(Fase)
-    ));
+    )));
     Pedido->SetVerb(TEXT("GET"));
     Pedido->SetTimeout(15.0f);
 
@@ -118,7 +141,7 @@ void AProgressHttpActor::CarregarFase(FString Fase)
             if (!Sucesso || !Response.IsValid()
                 || Response->GetResponseCode() < 200 || Response->GetResponseCode() >= 300)
             {
-                NotificarFalhaCarregamento(TEXT("Nao foi possivel carregar o inventario. Confira se a API esta rodando."));
+                NotificarFalhaCarregamento(DescreverFalhaApi(TEXT("carregar o inventario"), Response, Sucesso));
                 return;
             }
 
@@ -156,10 +179,10 @@ void AProgressHttpActor::CarregarColetadosDaFase(
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(FString::Printf(
-        TEXT("https://unreal-api-production.up.railway.app/api/progresso/%s/coletados"),
+    Pedido->SetURL(MontarUrl(FString::Printf(
+        TEXT("/%s/coletados"),
         *FGenericPlatformHttp::UrlEncode(Fase)
-    ));
+    )));
     Pedido->SetVerb(TEXT("GET"));
     Pedido->SetTimeout(15.0f);
 
@@ -171,7 +194,7 @@ void AProgressHttpActor::CarregarColetadosDaFase(
             if (!Sucesso || !Response.IsValid()
                 || Response->GetResponseCode() < 200 || Response->GetResponseCode() >= 300)
             {
-                NotificarFalhaCarregamento(TEXT("Nao foi possivel consultar os itens coletados."));
+                NotificarFalhaCarregamento(DescreverFalhaApi(TEXT("consultar os itens coletados"), Response, Sucesso));
                 return;
             }
 
@@ -225,7 +248,7 @@ void AProgressHttpActor::CarregarProgresso()
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(TEXT("https://unreal-api-production.up.railway.app/api/progresso"));
+    Pedido->SetURL(MontarUrl());
     Pedido->SetVerb(TEXT("GET"));
 
     Pedido->OnProcessRequestComplete().BindLambda(
@@ -284,7 +307,7 @@ void AProgressHttpActor::SalvarProgresso(
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(TEXT("https://unreal-api-production.up.railway.app/api/progresso"));
+    Pedido->SetURL(MontarUrl());
     Pedido->SetVerb(TEXT("PUT"));
     Pedido->SetHeader(TEXT("Content-Type"), TEXT("application/json"));
     Pedido->SetContentAsString(TextoJson);
@@ -348,7 +371,7 @@ void AProgressHttpActor::RegistrarColeta(
     TSharedRef<IHttpRequest, ESPMode::ThreadSafe> Pedido =
         FHttpModule::Get().CreateRequest();
 
-    Pedido->SetURL(TEXT("https://unreal-api-production.up.railway.app/api/progresso/coletar"));
+    Pedido->SetURL(MontarUrl(TEXT("/coletar")));
     Pedido->SetVerb(TEXT("POST"));
     Pedido->SetHeader(TEXT("Content-Type"), TEXT("application/json"));
     Pedido->SetContentAsString(TextoJson);

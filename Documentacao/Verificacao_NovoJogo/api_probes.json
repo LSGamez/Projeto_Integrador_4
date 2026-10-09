@@ -1,0 +1,36 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/progresso",
+    "status": 200,
+    "body": {
+      "jogadorId": 1,
+      "fase": "Cena_Lobby",
+      "checkpoint": null,
+      "vida": 100,
+      "itens": ""
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/api/progresso/Cena_Fase1/inventario",
+    "status": 200,
+    "body": {
+      "fase": "Cena_Fase1",
+      "itemA": 0,
+      "itemB": 0,
+      "bugigangas": 0
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/api/progresso/Cena_Fase1/coletados",
+    "status": 200,
+    "body": []
+  },
+  {
+    "method": "POST invalid",
+    "status": 400,
+    "body": "\"Informe a fase inicial e uma vida inicial maior que zero.\""
+  }
+]
