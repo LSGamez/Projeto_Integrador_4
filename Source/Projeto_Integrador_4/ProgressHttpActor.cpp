@@ -1,4 +1,5 @@
 #include "ProgressHttpActor.h"
+#include "CombateHttpActor.h"
 
 #include "HttpModule.h"
 #include "GenericPlatform/GenericPlatformHttp.h"
@@ -82,6 +83,7 @@ void AProgressHttpActor::NovoJogo(FString FaseInicial, int32 VidaInicial)
             }
 
             IniciandoNovoJogo = false;
+            ACombateHttpActor::LimparCacheLocal();
             UE_LOG(LogTemp, Display, TEXT("Novo jogo confirmado pela API. Fase inicial: %s"), *FaseInicial);
             // Abra o nivel neste evento, depois que o banco confirmar a limpeza.
             AoIniciarNovoJogo(FaseInicial);
