@@ -65,7 +65,7 @@ void ACombateHttpActor::LimparCacheLocal(){
 void ACombateHttpActor::CarregarLuta(FString Fase){
     if(Carregando||!FaseDeCombate(Fase))return;
     FaseAtual=Fase;Carregando=true;DadosProntos=false;
-    auto Pedido=FHttpModule::Get().CreateRequest();Pedido->SetURL(Base(UrlApi)+TEXT("/")+Fase+TEXT("/combate"));Pedido->SetVerb(TEXT("GET"));Pedido->SetTimeout(12);
+    auto Pedido=FHttpModule::Get().CreateRequest();Pedido->SetURL(Base(UrlApi)+TEXT("/")+Fase+TEXT("/combate"));Pedido->SetVerb(TEXT("GET"));Pedido->SetTimeout(90);
     Pedido->OnProcessRequestComplete().BindWeakLambda(this,[this](FHttpRequestPtr Q,FHttpResponsePtr R,bool OK){
         Carregando=false;auto Local=LerArquivo(Arquivo(FaseAtual));auto Root=Sucesso(R,OK)?Ler(R->GetContentAsString()):nullptr;
         TSharedPtr<FJsonObject> Escolhido;const TSharedPtr<FJsonObject>* Remoto=nullptr;FEstadoLuta Estado;double Rev=0;
@@ -118,7 +118,7 @@ void ACombateHttpActor::ContinuarLuta(){ConsultarUltimaLuta(true);}
 void ACombateHttpActor::ConsultarContinuar(){ConsultarUltimaLuta(false);}
 void ACombateHttpActor::ConsultarUltimaLuta(bool Abrir){
     if(Carregando)return;Carregando=true;
-    auto Pedido=FHttpModule::Get().CreateRequest();Pedido->SetURL(Base(UrlApi)+TEXT("/continuar-combate"));Pedido->SetVerb(TEXT("GET"));Pedido->SetTimeout(12);
+    auto Pedido=FHttpModule::Get().CreateRequest();Pedido->SetURL(Base(UrlApi)+TEXT("/continuar-combate"));Pedido->SetVerb(TEXT("GET"));Pedido->SetTimeout(90);
     Pedido->OnProcessRequestComplete().BindWeakLambda(this,[this,Abrir](FHttpRequestPtr Q,FHttpResponsePtr R,bool OK){
         Carregando=false;auto Local=LerArquivo(Arquivo(TEXT("UltimaLuta")));auto Remoto=Sucesso(R,OK)?Ler(R->GetContentAsString()):nullptr;
         FString Fase,LS,RS,LF;double LR=0,RR=0;FEstadoLuta E;

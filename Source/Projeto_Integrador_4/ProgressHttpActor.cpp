@@ -133,7 +133,8 @@ void AProgressHttpActor::CarregarFase(FString Fase)
         *FGenericPlatformHttp::UrlEncode(Fase)
     )));
     Pedido->SetVerb(TEXT("GET"));
-    Pedido->SetTimeout(15.0f);
+    // O plano gratuito do Render pode levar cerca de um minuto para despertar.
+    Pedido->SetTimeout(90.0f);
 
     // O callback deixa de ser executado se este ator for destruido.
     Pedido->OnProcessRequestComplete().BindWeakLambda(
@@ -186,7 +187,7 @@ void AProgressHttpActor::CarregarColetadosDaFase(
         *FGenericPlatformHttp::UrlEncode(Fase)
     )));
     Pedido->SetVerb(TEXT("GET"));
-    Pedido->SetTimeout(15.0f);
+    Pedido->SetTimeout(90.0f);
 
     Pedido->OnProcessRequestComplete().BindWeakLambda(
         this,

@@ -26,7 +26,7 @@ class PROJETO_INTEGRADOR_4_API ACombateHttpActor : public AActor
 public:
     ACombateHttpActor();
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Save da luta")
-    FString UrlApi = TEXT("https://unreal-api-production.up.railway.app/api/progresso");
+    FString UrlApi = TEXT("https://unreal-api-x1kl.onrender.com/api/progresso");
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Save da luta") FString BossIdDaFase;
     UPROPERTY(BlueprintReadOnly, Category="Save da luta") bool DadosProntos = false;
     UFUNCTION(BlueprintCallable, Category="Save da luta") void CarregarLuta(FString Fase);
